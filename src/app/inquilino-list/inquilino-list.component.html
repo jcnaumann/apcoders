@@ -1,0 +1,36 @@
+<div class = "row">
+    <hr/><hr/>
+    <h3>Listagem de Inquilinos</h3>
+</div>
+
+<div class = "fixTableHead">
+    <table class = "table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th> Id</th>
+                <th> Nome </th>
+                <th> Idade </th>
+                <th> Sexo </th>
+                <th> Telefone </th>
+                <th> E-mail </th>
+                <th> Ações </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let inquilino of inquilinos" >
+                <td> {{ inquilino.id }} </td>
+                <td> {{ inquilino.nome }} </td>
+                <td> {{ inquilino.idade }} </td>
+                <td> {{ inquilino.sexo }} </td>
+                <td> {{ inquilino.telefone }} </td>
+                <td> {{ inquilino.email }} </td>
+                <td>
+                    <button (click) = "updateInquilino(inquilino.id)" class = "btn btn-primary">Editar</button>
+                    <button (click) = "deleteInquilino(inquilino.id)" 
+                            (click) = "reloadCurrentPage()" class = "btn btn-danger" style="margin-left: 10px">Deletar</button>
+                    <button (click) = "inquilinoDetails(inquilino.id)" class = "btn btn-primary" style="margin-left: 10px">Detalhe</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
