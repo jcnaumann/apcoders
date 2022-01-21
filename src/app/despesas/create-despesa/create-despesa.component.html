@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center"> Cadastrar Despesa </h3>
+            <hr />
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label> Descrição </label>
+                        <input type="text" class="form-control" id="descricao" [(ngModel)]="despesa.descricao" name="descricao">
+                    </div>
+
+                    <!--o obj tpDesp busca a descrição apropriada para o tipo de despesa-->
+                    <div class="form-group">
+                        <label> Tipo de despesa </label>
+                        <input type="text" class="form-control" id="tipo-despesa" [(ngModel)]="tpDesp.descricao" name="tipo-despesa">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Valor </label>
+                        <input type="text" class="form-control" id="valor" [(ngModel)]="despesa.valor" name="valor">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Vencimento fatura </label>
+                        <input type="text" class="form-control" id="vencimento-fatura" [(ngModel)]="despesa.vencimentoFatura" name="vencimento-fatura">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Status pagamento </label>
+                        <input type="text" class="form-control" id="status-pagamento" [(ngModel)]="despesa.statusPagamento" name="status-pagamento">
+                    </div>
+
+                    <br />
+                    <button class="btn btn-success" type="submit">Enviar</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

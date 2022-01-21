@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center"> Atualizar Unidade </h3>
+            <hr />
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label> Identificação </label>
+                        <input type="text" class="form-control" id="identificacao" [(ngModel)]="unidade.identificacao" name="identificacao">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Proprietário </label>
+                        <input type="text" class="form-control" id="proprietario" [(ngModel)]="unidade.proprietario" name="proprietario">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Condomínio </label>
+                        <input type="text" class="form-control" id="condominio" [(ngModel)]="unidade.condominio" name="condominio">
+                    </div>
+
+                    <!--o obj endereco busca a descrição apropriada para o tipo de endereco-->
+                    <div class="form-group">
+                        <label> Endereço </label>
+                        <input type="text" class="form-control" id="endereco" [(ngModel)]="endereco.endereco" name="endereco">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Complemento </label>
+                        <input type="text" class="form-control" id="complemento" [(ngModel)]="endereco.complemento" name="complemento">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Bairro </label>
+                        <input type="text" class="form-control" id="bairro" [(ngModel)]="endereco.bairro" name="bairro">
+                    </div>
+                    <div class="form-group">
+                        <label> Cidade </label>
+                        <input type="text" class="form-control" id="cidade" [(ngModel)]="endereco.cidade" name="cidade">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Estado </label>
+                        <input type="text" class="form-control" id="estado" [(ngModel)]="endereco.estado" name="estado">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Cep </label>
+                        <input type="text" class="form-control" id="cep" [(ngModel)]="endereco.cep" name="cep">
+                    </div>
+
+                    <br />
+                    <button class="btn btn-success" type="submit">Enviar</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
